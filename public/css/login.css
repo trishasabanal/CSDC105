@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.container{
+    font-family: 'Montserrat', sans-serif;
+}
+
 .card{
     border-color: #FFB200;
     border-width: 4px;
@@ -27,9 +33,8 @@
 
 .lowgow{
     position: absolute;
-    left: -50%;
-    top: -400px;
-    transform: translateX(-50%);
+    top: -590px;
+    left: 685px;
     width: 100px;
     height: 100px;
     border-color: #FFB200;
@@ -37,7 +42,8 @@
     background-color: #FFF4CF;
     border-style: solid;
     border-radius: 50%;
-    z-index: 10009;
+    z-index: 200;
+    justify-content: center;
 }
 
 .login{

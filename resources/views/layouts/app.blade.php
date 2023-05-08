@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
         integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
         crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/TripgoRouting.css" />
     @yield('css')
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -32,6 +34,10 @@
     <script src="./Bootstrap/js/bootstrap.bundle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="dist/TripgoRouting.js"></script>
+    <script src="lib/jquery-3.2.1.js"></script>
+    <script src="lib/Polyline-encoded.js"></script>
     
 </head>
 <body id="body-pd" oncontextmenu="return false" class="snippet-body body-pd">
@@ -43,7 +49,7 @@
                 <div class="header_toggle me-2 mt-2">
                     <i class='bx bx-arrow-back' id="header-toggle"></i>
                 </div>
-                <button type="button" href="/ride/0" class="btn btn-primary h-25 fw-bold pe-3 mt-2 rounded-pill shadow map-select {{request()->is('tricycle') ? 'active' : ''}}">
+                <button type="button" id="tricycleBtn" href="/ride/0" class="btn btn-primary h-25 fw-bold pe-3 mt-2 rounded-pill shadow map-select {{request()->is('tricycle') ? 'active' : ''}}">
                     <img class="v-icon mx-1" src="{{asset('img/Icons/Vehicle Icons/tricy.png')}}" width="20"></img>
                     Tricycle</button>
                 <button type="button" href="/ride/1" class="btn btn-primary h-25 fw-bold pe-3 mt-2 rounded-pill shadow map-select {{request()->is('jeepney') ? 'active' : ''}}">
@@ -138,5 +144,19 @@
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
         integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
         crossorigin=""></script>
+        <script>                  
+                 let options ={
+                     "mapId" : "map",
+                     "googleTile": false,
+                     "marCenter" : {
+                         "lat": 51.511011,
+                         "lng": -0.125448
+                     },
+                    "floatPanel": true,
+                    "tripgoApiKey": "your TripGo API key"
+                 }
+                 
+                L.tripgoRouting.mapLayer.initialize(options);
+            </script> 
 </body>
 </html>

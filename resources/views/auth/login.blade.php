@@ -3,11 +3,10 @@
 <link href="{{ asset('css/login.css') }}" rel="stylesheet">
 @endsection
 @section('content')
-
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-4">
-                <div class="card-container" style="position: relative;">
+                <div class="card-container text-center">
                     <img src="{{ asset('img/Lowgow.png') }}" class="lowgow" alt="Lunad Logo">
                     <div class="card">
                         <div class="card-body">
@@ -67,7 +66,7 @@
 
                                         <div class="col text-md-end">              
                                             @if (Route::has('password.request'))
-                                            <a class="btn btn-link text-red" href="{{ route('password.request') }}" style="font-size: smaller; color: red; text-decoration: none; font-weight: bold; font-style: italic;">
+                                            <a class="btn btn-link text-red" href="{{ route('password.request') }}" style="font-size: smaller; color: red; font-weight: bold; font-style: italic;">
                                                 {{ __('Forgot Password?') }}
                                             </a>
                                             @endif
@@ -83,8 +82,9 @@
                                     </div>
                                 </div>
                                 
-                                <div class="col-md-9 mx-auto" style="text-align: center;">
-                                    <p style="font-weight: bold; font-size: smaller;">Don't have an account? <a href="{{ route('register') }}" style="color: red; text-decoration: none;">Sign Up</a></p>
+                                <div class="col-md-12 mx-auto text-center">
+                                    <p class="d-inline-block">Don't have an account? </p>
+                                    <a class="text-red" href="{{ route('register') }}" style="font-size: smaller; font-weight: bold;"> Sign Up</a>
                                 </div>
                             </form>
                         </div>
@@ -93,5 +93,4 @@
             </div>
         </div>
     </div>
-
 @endsection

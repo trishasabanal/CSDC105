@@ -34,7 +34,7 @@ this.classList.add('active')
 }
 linkColor.forEach(l=> l.addEventListener('click', colorLink))
 
-    // Your code to run since DOM is loaded and ready
+//MAP
     const map = L.map('map', {
         center: [13.629841, 123.184358],
         zoom: 17,
@@ -50,17 +50,23 @@ linkColor.forEach(l=> l.addEventListener('click', colorLink))
         iconUrl: 'img/locpin.png',
         iconSize: [40, 40],
     });
+
+    const tricycleIcon = L.icon({
+        iconUrl: 'img/Icons/Vehicle Icons/tricy.png',
+        iconSize: [40, 40],
+    });
     
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
-    const marker1 = L.marker([13.630363, 123.185575], {icon: locationIcon})
-        .bindPopup('<b>Tricycle Terminal</b><br/> <p><b>Fare: </b>13 Pesos<br/> <b>Time: </b>7:00 - 19:00</p>')
-        .addTo(map);
-    const marker2 = L.marker([13.628146, 123.184450], {icon: locationIcon}).addTo(map);
-    const marker3 = L.marker([13.629579, 123.183326], {icon: locationIcon}).addTo(map);
-    const marker4 = L.marker([13.625989, 123.184749], {icon: locationIcon}).addTo(map);
-    const marker5 = L.marker([13.624851, 123.184302], {icon: locationIcon}).addTo(map);
-    const marker6 = L.marker([13.634069, 123.189960], {icon: locationIcon}).addTo(map);
-    const marker7 = L.marker([13.634209, 123.185717], {icon: locationIcon}).addTo(map);
-    const marker8 = L.marker([13.623031, 123.184687], {icon: locationIcon}).addTo(map);
-    const marker9 = L.marker([13.623910, 123.183889], {icon: locationIcon}).addTo(map);
+    
+
+    document.getElementById('tricycleBtn').addEventListener('click', ()=>{
+        //add clear map to reset map
+        const marker1 = L.marker([13.630363, 123.185575], {icon: locationIcon})
+            .bindPopup('<img class="mx-1" src="img/Icons/Vehicle Icons/tricy.png" width="20"></img> <b>Tricycle</b><br/> <p><b>Regular Fare: </b>13 Pesos<br/> <b>Time: </b>07:00 AM - 07:00 PM</p>')
+            .addTo(map);
+        const marker2 = L.marker([13.624486, 123.184917], {icon: locationIcon})
+            .bindPopup('<img class="mx-1" src="img/Icons/Vehicle Icons/tricy.png" width="20"></img> <b>Tricycle</b><br/> <p><b>Regular Fare: </b>13 Pesos<br/> <b>Time: </b>07:00 AM - 07:00 PM</p>')
+            .addTo(map);
+    })
+
 });

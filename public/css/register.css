@@ -4,6 +4,7 @@ html,body{
 }
 
 body{
+    background: radial-gradient(ellipse at center, #FFF4CF, #FFB200);
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -38,9 +39,9 @@ body{
 }
 
 .card{
-    border-color: #FFB200;
-    border-width: 4px;
-    border-radius: 15px;
+    border-color: #FFB200 !important;
+    border-width: 4px !important;
+    border-radius: 15px !important;
 }
 
 .card-body{

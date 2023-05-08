@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
 
-:root {
+:root{
   --color-default:#FFCB42;
   --color-second:#FFF4CF;
   --color-secondTrans: rgba(255, 255, 255, .75);
@@ -17,35 +17,36 @@
 }
 
 #body-pd{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-#map {
+#map{
   width: 100vw;
   height: 100vh;
 }
 
-.lunad_UI {
+.lunad_UI{
   position: fixed;
   z-index: 9999;
 }
 
-a {
-    text-decoration: none!important;
-    color: var(--first-color)!important;
+a{
+  text-decoration: none!important;
+  color: var(--first-color)!important;
 }
 
 .text-red{
   color: red !important;
 }
 
-.p {
-    font-size:14px;
+.p{
+  font-size:14px;
 }
 .navbar-toggler{
-    background-color: #fff9e7;
+  background-color: #fff9e7;
 }
+
 .map-select{
   font-family: 'Roboto', sans-serif;
   background-color: var(--color-secondTrans)!important;
@@ -53,14 +54,17 @@ a {
   color: var(--first-color)!important;
   font-size: 14px!important;
 }
+
 .map-select:hover{
   background-color: var(--color-default)!important;
   color: #000000!important;
 }
+
 .map-select:active{
   background-color: var(--color-second)!important;
   color: #000000!important;
 }
+
 .map-select:focus{
   background-color: var(--color-second)!important;
   border: var(--first-color) 2px solid!important;
@@ -69,11 +73,11 @@ a {
 
 *,
 ::before,
-::after {
+::after{
   box-sizing: border-box;
 }
 
-.header {
+.header{
   width: 100%;
   height: var(--header-height);
   position: fixed;
@@ -88,13 +92,13 @@ a {
   transition: .5s;
 }
 
-.header_toggle {
+.header_toggle{
   color: var(--first-color);
   font-size: 1.5rem;
   cursor: pointer;
 }
 
-.header_img {
+.header_img{
   width: 35px;
   height: 35px;
   display: flex;
@@ -103,22 +107,22 @@ a {
   overflow: hidden;
 }
 
-.header_img img {
+.header_img img{
   width: 40px;
 }
 
-.logoText {
+.logoText{
   color: var(--first-color);
   font-family: Montserrat, sans-serif;
   font-weight: bold;
   font-size: 20px;
 }
 
-#logo {
+#logo{
   background-color: var(--color-secondTrans);
 }
 
-.l-navbar {
+.l-navbar{
   position: fixed;
   top: 0;
   left: -30%;
@@ -130,8 +134,7 @@ a {
   z-index: var(--z-fixed);
 }
 
-
-.nav {
+.nav{
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -144,7 +147,7 @@ a {
 }
 
 .saved_routes,
-.route_link {
+.route_link{
   display: grid;
   grid-template-columns: max-content max-content;
   align-items: center;
@@ -159,26 +162,26 @@ a {
   color: var(--first-color);
 }
 
-.route_link {
+.route_link{
   position: relative;
   color: var(--first-color);
   margin-bottom: 1.5rem;
   transition: .3s;
 }
 
-.route_link:hover {
+.route_link:hover{
   color: var(--color-default);
 }
 
-.nav_icon {
+.nav_icon{
   font-size: 1.25rem;
 }
 
-.user_icon {
+.user_icon{
   font-size: 1.25rem;
 }
 
-.user_text {
+.user_text{
   font-size: 14px;
   font-family: 'Roboto', sans-serif;
 }
@@ -191,19 +194,19 @@ a {
   background-color: var(--color-secondTrans);
 }
 
-.show {
+.show{
   left: 0;
 }
 
-.body-pd {
+.body-pd{
   padding-left: calc(var(--nav-width) + 1rem);
 }
 
-.active {
+.active{
   color: var(--white-color);
 }
 
-.active::before {
+.active::before{
   content: '';
   position: absolute;
   left: 0;
@@ -212,25 +215,25 @@ a {
   background-color: var(--white-color);
 }
 
-.height-100 {
+.height-100{
   height: 100vh;
 }
 
-@media screen and (min-width: 768px) {
-    .header {
+@media screen and (min-width: 768px){
+    .header{
         height: calc(var(--header-height) + 1rem);
         padding: 0 2rem 0 calc(var(--nav-width) + 2rem);
     }
 
-    .l-navbar {
+    .l-navbar{
         left: 0;
     }
 
-    .show {
+    .show{
         width: calc(var(--nav-width) + 176px);
     }
 
-    .body-pd {
+    .body-pd{
         padding-left: calc(var(--nav-width) + 198px);
     }
 }
