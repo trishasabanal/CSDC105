@@ -83,7 +83,7 @@
                                 </div>
                                 
                                 <div class="col-md-12 mx-auto text-center">
-                                    <p class="d-inline-block">Don't have an account? </p>
+                                    <p class="d-inline-block" style="font-size: smaller; font-weight: bold;">Don't have an account? </p>
                                     <a class="text-red" href="{{ route('register') }}" style="font-size: smaller; font-weight: bold;"> Sign Up</a>
                                 </div>
                             </form>

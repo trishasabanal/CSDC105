@@ -52,16 +52,16 @@
                 <button type="button" id="tricycleBtn" href="/ride/0" class="btn btn-primary h-25 fw-bold pe-3 mt-2 rounded-pill shadow map-select {{request()->is('tricycle') ? 'active' : ''}}">
                     <img class="v-icon mx-1" src="{{asset('img/Icons/Vehicle Icons/tricy.png')}}" width="20"></img>
                     Tricycle</button>
-                <button type="button" href="/ride/1" class="btn btn-primary h-25 fw-bold pe-3 mt-2 rounded-pill shadow map-select {{request()->is('jeepney') ? 'active' : ''}}">
+                <button type="button" id="jeepneyBtn" href="/ride/1" class="btn btn-primary h-25 fw-bold pe-3 mt-2 rounded-pill shadow map-select {{request()->is('jeepney') ? 'active' : ''}}">
                     <img class="v-icon mx-1" src="{{asset('img/Icons/Vehicle Icons/jeepney.png')}}" width="20"></img>
                     Jeepney</button>
-                <button type="button" href="/ride/2" class="btn btn-primary h-25 fw-bold pe-3 mt-2 rounded-pill shadow map-select {{request()->is('pedicab') ? 'active' : ''}}">
+                <button type="button" id="pedicabBtn" href="/ride/2" class="btn btn-primary h-25 fw-bold pe-3 mt-2 rounded-pill shadow map-select {{request()->is('pedicab') ? 'active' : ''}}">
                     <img class="v-icon mx-1" src="{{asset('img/Icons/Vehicle Icons/pedicab.png')}}" width="20"></img>
                     Pedicab</button>
-                <button type="button" href="/ride/3" class="btn btn-primary h-25 fw-bold pe-3 mt-2 rounded-pill shadow map-select {{request()->is('bus') ? 'active' : ''}}">
+                <button type="button" id="busBtn" href="/ride/3" class="btn btn-primary h-25 fw-bold pe-3 mt-2 rounded-pill shadow map-select {{request()->is('bus') ? 'active' : ''}}">
                     <img class="v-icon mx-1" src="{{asset('img/Icons/Vehicle Icons/bus.png')}}" width="20"></img>
                     Bus</button>
-                <button type="button" href="/ride/4" class="btn btn-primary h-25 fw-bold pe-3 mt-2 rounded-pill shadow map-select {{request()->is('van') ? 'active' : ''}}">
+                <button type="button" id="vanBtn" href="/ride/4" class="btn btn-primary h-25 fw-bold pe-3 mt-2 rounded-pill shadow map-select {{request()->is('van') ? 'active' : ''}}">
                     <img class="v-icon mx-1" src="{{asset('img/Icons/Vehicle Icons/van.png')}}" width="20"></img>
                     Van</button>
             </div>
