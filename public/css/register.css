@@ -1,0 +1,64 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.no-navbar .navbar{
+    display: none;
+}
+
+.container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.lowgow{
+    position: absolute;
+    top: -40px;
+    width: 85px;
+    height: 85px;
+    z-index: 1;
+    border-color: #FFB200;
+    border-width: 4px;
+    background-color: white;
+    border-style: solid;
+    border-radius: 50%;
+}
+
+.card{
+    border-color: #FFB200;
+    border-width: 4px;
+    border-radius: 15px;
+}
+
+.card-body{
+    height: 400px;
+    width: 450px;
+    font-size: 12px;
+    margin: 30px;
+}
+
+.register{
+    background-color: #FFB200;
+    width: 180px;
+    height: 40px;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+#fname, #surname, #email, #password, #password-confirm{
+    background-color: #F2F1F1;
+    border-radius: 4px;
+}
