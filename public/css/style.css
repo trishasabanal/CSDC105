@@ -10,7 +10,7 @@
   --header-height: 3rem;
   --nav-width: 68px;
   --first-color: #555555;
-  --first-color-light: #777777;
+  --first-color-light: #999999;
   --white-color: #F7F6FB;
   --normal-font-size: 1rem;
   --z-fixed: 100;
@@ -57,18 +57,38 @@ a{
 
 .map-select:hover{
   background-color: var(--color-default)!important;
-  color: #000000!important;
 }
 
 .map-select:active{
   background-color: var(--color-second)!important;
-  color: #000000!important;
 }
+
+.tricySelect{
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--color-secondTrans)!important;
+  border: none!important;
+  color: var(--first-color)!important;
+  font-size: 14px!important;
+}
+
+/*
+.tricySelect:hover{
+  background-color: var(--color-default)!important;
+}
+
+.tricySelect:active{
+  background-color: var(--color-second)!important;
+}
+
+.tricySelect:focus{
+  background-color: var(--color-second)!important;
+  border: var(--first-color-light) 2px solid!important;
+}
+*/
 
 .map-select:focus{
   background-color: var(--color-second)!important;
-  border: var(--first-color) 2px solid!important;
-  color: #000000!important;
+  border: var(--first-color-light) 2px solid!important;
 }
 
 *,
@@ -120,6 +140,7 @@ a{
 
 #logo{
   background-color: var(--color-secondTrans);
+  border: 1px solid var(--first-color-light);
 }
 
 .l-navbar{
@@ -167,6 +188,16 @@ a{
   color: var(--first-color);
   margin-bottom: 1.5rem;
   transition: .3s;
+}
+
+.marker-info{
+  position: relative;
+  color: var(--first-color);
+  margin-top: 1.5rem;
+  background-color: var(--color-secondTrans);
+  border: 1px solid var(--first-color-light);
+  font-size: small;
+  text-align: left;
 }
 
 .route_link:hover{
@@ -230,10 +261,10 @@ a{
     }
 
     .show{
-        width: calc(var(--nav-width) + 176px);
+        width: calc(var(--nav-width) + 215px);
     }
 
     .body-pd{
-        padding-left: calc(var(--nav-width) + 198px);
+        padding-left: calc(var(--nav-width) + 234px);
     }
 }
