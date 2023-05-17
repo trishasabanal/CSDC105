@@ -24,4 +24,18 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function userHome()
+    {
+        return view('home',["msg"=>"I am a User."]);
+    }
+
+    public function adminHome()
+    {
+        if (Auth::user()->isAdmin()) {
+            return redirect('/');
+        } else {
+            return view('admin.home');
+        }
+    }
 }

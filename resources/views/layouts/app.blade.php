@@ -38,6 +38,7 @@
     <script src="dist/TripgoRouting.js"></script>
     <script src="lib/jquery-3.2.1.js"></script>
     <script src="lib/Polyline-encoded.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     
 </head>
 <body id="body-pd" oncontextmenu="return false" class="snippet-body body-pd">
@@ -65,7 +66,7 @@
                     <img class="v-icon mx-1" src="{{asset('img/Icons/Vehicle Icons/van.png')}}" width="20"></img>
                     Van</button>
             </div>
-            <div class="navbar-nav ms-auto h-35 mt-2 px-3 py-2 align-middle rounded-pill" id="logo">
+            <div class="navbar-nav ms-auto mt-2 px-3 py-2 align-middle rounded-3 shadow" id="logo">
                 <img class="logo mt-1" src="{{asset('img/Logo transparent.png')}}" height="20"></img>
                 <span class="logoText ms-2">Lunad</span>
             </div>
@@ -75,13 +76,20 @@
             <nav class="nav">
                 <div class="saved_routes pt-4 pb-3 shadow-sm">
                     <i class='bx bx-bookmark nav_icon'></i>
-                    <span class="nav_name ms-2 fw-bold">Saved Routes</span>
+                    <span class="nav_name ms-2 fw-bold">Saved Markers</span>
                 </div>
 
                 <!-- Saved routes list -->
                 <div class="nav_list ms-5 mb-auto">
-                    <a href="#" class="route_link">
-                    <i class='bx bx-pin nav_icon'></i> <span class="nav_name">route 1</span> </a>
+                    <!-- <button type="button" id="saved1" class="marker-info rounded-3 ms-4 me-3 shadow-sm">
+                        <div class="px-2 py-1">
+                            <img class="mx-1" src="img/Icons/Vehicle Icons/tricy.png" width="20">
+                            <b>Tricycle</b><br>
+                            ADNU 1st Gate, Pedro Santos Avenue<br>
+                            <b>Regular Fare: </b>13 Pesos<br>
+                            <b>Time: </b>07:00 AM - 07:00 PM
+                        </div>
+                    </button> -->
                 </div>
                 
                 <div class="navbar navbar-expand-md shadow ps-4 py-2 user_bar">
@@ -107,27 +115,9 @@
                                                         document.getElementById('logout-form').submit();">
                                             {{ __('Logout') }}
                                         </a>
-
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                             @csrf
                                         </form>
-                                <!-- <li class="nav-item dropdown">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->name }}
-                                    </a>
-
-                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();">
-                                            {{ __('Logout') }}
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                            @csrf
-                                        </form>
-                                    </div>
-                                </li> -->
                             @endguest
                         </ul>
                     </div>
